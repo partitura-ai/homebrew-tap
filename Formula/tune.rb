@@ -7,14 +7,14 @@ class Tune < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/partitura-ai/tune/releases/download/v1.2.0/tune-darwin-arm64.tar.gz"
-      sha256 "c2b65d3649bf1a81432ba76f01a8d96816721796dce2efe846d1d7849ff9e888"
+      sha256 "122c34cc1ac836df31a6014ef441170df6aaa547c8bf25676a23917ea1ef38de"
 
       def install
         bin.install "tune-darwin-arm64" => "tune"
       end
     else
       url "https://github.com/partitura-ai/tune/releases/download/v1.2.0/tune-darwin-amd64.tar.gz"
-      sha256 "d60e147f09e2ace0e2980b29d3fa929bd02d064d133a1552fc2dea82fc770348"
+      sha256 "e679d43f3798617f9c31ce8350668eec06aa604d337f5c4585597d3ab9225c73"
 
       def install
         bin.install "tune-darwin-amd64" => "tune"
@@ -25,14 +25,14 @@ class Tune < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/partitura-ai/tune/releases/download/v1.2.0/tune-linux-arm64.tar.gz"
-      sha256 "ee93991da81e2aa67842d18e90652d16e84797a1c6283331c62388262fa4117b"
+      sha256 "b215ee450da95a217e849e2658eb5d8b7ef7288c32f32c838b602bff4ef8460d"
 
       def install
         bin.install "tune-linux-arm64" => "tune"
       end
     else
       url "https://github.com/partitura-ai/tune/releases/download/v1.2.0/tune-linux-amd64.tar.gz"
-      sha256 "ab5351f30159e10e374a70cd3a8faeac0db659841cb9cc6e12db8483a184c8a7"
+      sha256 "8a1cdad5dd4a2117263fc0308243d8442021877e92349e23a6ecfaadf3bae837"
 
       def install
         bin.install "tune-linux-amd64" => "tune"
