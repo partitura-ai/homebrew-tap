@@ -1,20 +1,20 @@
 class Tune < Formula
   desc "AI-powered command output filter for coding agents"
   homepage "https://github.com/partitura-ai/tune"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/partitura-ai/tune/releases/download/v1.4.0/tune-darwin-arm64.tar.gz"
-      sha256 "36f2b3f61de24b832b2d7a147daf2ebe93171815f6767614e0dd477aecb8c809"
+      url "https://github.com/partitura-ai/tune/releases/download/v1.4.1/tune-darwin-arm64.tar.gz"
+      sha256 "cb3872f37d20a9204f4f48ad881b864fdcb92b0358cf785544cc42bcb3815caa"
 
       def install
         bin.install "tune-darwin-arm64" => "tune"
       end
     else
-      url "https://github.com/partitura-ai/tune/releases/download/v1.4.0/tune-darwin-amd64.tar.gz"
-      sha256 "e2abf5d0946037b3aa569b50a445805fb55788fc88628335232dba7715913774"
+      url "https://github.com/partitura-ai/tune/releases/download/v1.4.1/tune-darwin-amd64.tar.gz"
+      sha256 "f6066c9bf9d003e4ac1c77c5a89fdd993f773002d459be1b906b148de40f698e"
 
       def install
         bin.install "tune-darwin-amd64" => "tune"
@@ -24,15 +24,15 @@ class Tune < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/partitura-ai/tune/releases/download/v1.4.0/tune-linux-arm64.tar.gz"
-      sha256 "e3ed010fed9c0d1d652fd8a48639096aff2d880d1ae3edb09dac3685baab62dc"
+      url "https://github.com/partitura-ai/tune/releases/download/v1.4.1/tune-linux-arm64.tar.gz"
+      sha256 "941e1081ddd8a9a89040b099ff4a970e1072f1f6f23a0ec430bff85068469a1e"
 
       def install
         bin.install "tune-linux-arm64" => "tune"
       end
     else
-      url "https://github.com/partitura-ai/tune/releases/download/v1.4.0/tune-linux-amd64.tar.gz"
-      sha256 "82f3cbb29c7d9b9aa54f656c81ca69a909a66ecf503ffaada79422dd1ce92e6c"
+      url "https://github.com/partitura-ai/tune/releases/download/v1.4.1/tune-linux-amd64.tar.gz"
+      sha256 "11651cc224385e0416845b2059d61d5bf5021971e3c24ba28d9399f618917e85"
 
       def install
         bin.install "tune-linux-amd64" => "tune"
@@ -41,6 +41,6 @@ class Tune < Formula
   end
 
   test do
-    assert_match "tune 1.4.0", shell_output("#{bin}/tune --version")
+    assert_match "tune 1.4.1", shell_output("#{bin}/tune --version")
   end
 end
